@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.todo:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.todo-content {
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+
+.todo .text,
+.todo .edit-input {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #333;
+  transition: opacity 0.3s, transform 0.3s, scale 0.3s;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+}
+
+.todo .text {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+}
+
+.todo .edit-input {
+  opacity: 0;
+  transform: scale(0.9);
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 530px;
+  max-width: 550px;
+  border: none;
+  border-bottom: 2px solid #007bff;
+  background-color: transparent;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  transition: opacity 0.3s, transform 0.3s, scale 0.3s;
+  transform: translateY(-50%);
+}
+
+.todo .edit-input.show {
+  opacity: 1;
+  transform: scale(1) translateY(-50%);
+}
+
+.todo .text.hide {
+  opacity: 0;
+}
+
+.todo .icons {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.todo .icons svg {
+  font-size: 25px;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.todo .icons svg:hover {
+  color: #0056b3;
+  transform: scale(1.1);
+}
+
+.edit-input:focus {
+  outline: none;
+  border-bottom: 2px solid #0056b3;
+}

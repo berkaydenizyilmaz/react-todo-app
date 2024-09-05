@@ -1,0 +1,52 @@
+.todo-create {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #e0e0e0; /* Altında ince bir çizgi */
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  margin-top: 50px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.todo-create:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.todo-create input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  border-radius: 0;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.todo-create input:focus {
+  border-bottom: 2px solid #007bff;
+}
+
+.todo-create button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.todo-create button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
